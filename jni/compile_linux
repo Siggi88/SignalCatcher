@@ -1,0 +1,3 @@
+#!/bin/bash
+cd "`dirname "$0"`"
+gcc -o libsignalcatcher.so hk_siggi_signalcatcher_SignalCatcher.c -shared -fpic -lcrypt -I/usr/local/jdk/include -I/usr/local/jdk/include/linux
