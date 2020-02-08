@@ -1,4 +1,4 @@
-#include "hk_siggi_signalcatcher_SignalCatcher.h"
+#include "io_siggi_signalcatcher_SignalCatcher.h"
 #include <signal.h>
 #include <unistd.h>
 #include <pthread.h>
@@ -18,12 +18,12 @@ void signal_handler(int signal_value) {
 }
 
 JNIEXPORT jint JNICALL
-Java_hk_siggi_signalcatcher_SignalCatcher_doKill (JNIEnv *env, jclass cls, jint pID, jint signal) {
+Java_io_siggi_signalcatcher_SignalCatcher_doKill (JNIEnv *env, jclass cls, jint pID, jint signal) {
 	return (jint) kill(pID, signal);
 }
 
 JNIEXPORT void JNICALL
-Java_hk_siggi_signalcatcher_SignalCatcher_startHandlingSignal (JNIEnv *env, jclass cls, jint signal_jint) {
+Java_io_siggi_signalcatcher_SignalCatcher_startHandlingSignal (JNIEnv *env, jclass cls, jint signal_jint) {
 	jmethodID mid = (*env)->GetStaticMethodID(env, cls, "callback", "(I)V");
 
 	int signal_to_listen_for = (int) signal_jint;

@@ -1,3 +1,3 @@
 #!/bin/bash
 cd "`dirname "$0"`"
-gcc -o libsignalcatcher.so hk_siggi_signalcatcher_SignalCatcher.c -shared -fpic -lcrypt -I/usr/lib/jvm/java-8-openjdk-armhf/include -I/usr/lib/jvm/java-8-openjdk-armhf/include/linux
+gcc -o libsignalcatcher.so io_siggi_signalcatcher_SignalCatcher.c -shared -fpic -lcrypt -I/usr/lib/jvm/java-8-openjdk-armhf/include -I/usr/lib/jvm/java-8-openjdk-armhf/include/linux

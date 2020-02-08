@@ -1,4 +1,4 @@
 #!/bin/bash
 cd "`dirname "$0"`"
-cc -c -I/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/include/darwin hk_siggi_signalcatcher_SignalCatcher.c -o hk_siggi_signalcatcher_SignalCatcher.o
-cc -dynamiclib -o libsignalcatcher.jnilib hk_siggi_signalcatcher_SignalCatcher.o -framework JavaVM
+cc -c -I/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/include -I/Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/include/darwin io_siggi_signalcatcher_SignalCatcher.c -o io_siggi_signalcatcher_SignalCatcher.o
+cc -dynamiclib -o libsignalcatcher.jnilib io_siggi_signalcatcher_SignalCatcher.o -framework JavaVM
